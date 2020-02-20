@@ -1,0 +1,175 @@
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+
+    font-family: 'Roboto', sans-serif;
+
+    background-color: #f9f9f9;
+}
+
+/* Títulos*/
+
+header h1, main h2 {
+    margin-bottom: 70px;
+}
+
+h1 h2 {
+    color: #000000cc;
+}
+
+/* Alinhamentos, Espaçamentos. Larguras e Alturas*/
+
+header, main, footer {
+    text-align: center;
+}
+
+.logo{
+    width: 200px;
+    margin: 70px 0;
+}
+
+/* Form */
+
+section.form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 45px;
+    align-items: center;
+
+    background-color: #ff4f4f;
+
+    padding: 16px 64px;
+
+    border-radius: 10px;
+}
+
+form input, form button {
+    width: 100%;
+
+    margin-bottom: 4px;
+
+    /* Correção de Comportamento */
+    box-sizing: border-box;
+
+    /* Preenchimento */
+    padding: 8px 16px;
+
+    border-radius: 15px;
+
+    border: 1px #ffffff88 solid;
+}
+
+form input{
+    background-color: transparent
+}
+
+form input::placeholder {
+    color: #ffffffaa;
+}
+
+form button {
+    font-weight: bold;
+}
+
+.form h2 {
+    text-align: center;
+    color: #f9f9f9ee;
+
+    font-size: 18px;
+}
+
+.donors {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+header, .form, main {
+    /* Espaços c/ margin*/
+    margin: 0 auto 70px;
+
+    /*Limites do Elemento na Página*/
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Header */
+header button{
+    padding: 8px 16px;
+    border-radius: 15px;
+
+    border: none;
+
+    margin-top: 20px;
+
+    background-color: #ff4f4f;
+    color: white;
+    font-weight: bold;
+}
+
+main h2 span{
+    color: #ff4f4f;
+}
+
+.blood {
+    color: #ff4f4f;
+    font-weight: bold;
+    font-size: 14px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+
+}
+
+.blood::before{
+    content: "";
+    background-color: #ff4f4f11;
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+    /* Gota */
+    border-radius: 50%;
+    border-top-right-radius: 0;
+    transform: rotate(-45deg);
+
+}
+
+.donor p {
+    margin-top: 25px;
+    margin-bottom: 65px;
+    font-size: 15px;
+}
+
+
+footer {
+    margin-top: auto;
+    padding: 16px;
+
+    border: 1px solid #eee;
+}
+
+/* Mostrar e Esconder Form */
+
+section.form {
+    transition: all 300ms;
+}
+
+section.form.hide {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin-top: -70px;
+}
